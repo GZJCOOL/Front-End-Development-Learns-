@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lv2</title>
+</head>
+
+<body>
+
+    <div>
+        <b>请选择您的爱好</b>
+        <br />
+    </div>
+
+    <div id="divlist">
+        <input type="checkbox" name="hobby">内卷
+        <input type="checkbox" name="hobby">疯狂内卷
+        <input type="checkbox" name="hobby">拼命内卷
+        <input type="checkbox" name="hobby">使劲内卷
+        <br />
+        <input onclick="checkall()" type="button" value="全选">
+        <input onclick="clearall()" type="button" value="全不选">
+        <input onclick="checkinverse()" type="button" value="反选">
+    </div>
+
+</body>
+<script>
+function checkall(){
+    var hobby = document.getElementsByName("hobby");
+    for(var i=0;i<hobby.length;i++){
+        hobby[i].checked=true;
+    }
+           
+}
+function clearall(){
+    var hobby = document.getElementsByName("hobby");
+    for(var i=0;i<hobby.length;i++){
+    	hobby[i].checked = false;
+    }
+            
+}
+
+function checkinverse(){
+	var hobby = document.getElementsByName("hobby");
+	for(var i = 0;i < hobby.length;i++){
+		hobby[i].checked = !hobby[i].checked;
+	}
+}
+
+
+</script>
+
+</html>

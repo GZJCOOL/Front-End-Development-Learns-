@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style> 
+    body,div,ul,li,input{margin:0;padding:0;} 
+    div{width:200px;margin:100px auto;} 
+    ul{width:200px;margin-bottom:50px;} 
+    li{width:90%;list-style-type:none;font-weight:16px;text-indent:12px;float:left;} 
+    textarea{height:50px;width:100%;font-size:16px;} 
+</style> 
+
+<body> 
+<div> 
+    <ul id='ly'> 
+        <li style="width:100%;">留言的问题</li> 
+         
+    </ul> 
+    <textarea  id="tta">AAA</textarea> 
+    <input type='button' style="margin-top:10px;height:30px;width:50px;" id='fb' value='发布'> 
+</div> 
+<script> 
+    var tta=document.getElementById('tta'); 
+    var ly=document.getElementById('ly'); 
+    var fb=document.getElementById('fb'); 
+    var inpts=[]; 
+    var lis=[]; 
+    var ii=0; 
+    fb.onclick=fbff; 
+    function fbff(){ 
+    x1=0;x2=0; 
+        var li=document.createElement('li'); 
+         
+        var text=tta.value; 
+       
+        
+   
+        if(text.length==0||tta.value.indexOf(" ")==0){ 
+            alert('留言不能为空！！请输入留言！！！') 
+            return; 
+        } 
+        else{ 
+            tta.value=''; 
+            var inpt1=document.createElement('input'); 
+            inpt1.setAttribute('type','button'); 
+            inpt1.setAttribute('value','x'); 
+            inpt1.style.opacity=0; 
+            li.style.opacity=0; 
+            ly.appendChild(li); 
+           
+            li.innerHTML=text; 
+             
+            ly.appendChild(inpt1); 
+            lis[ii]=li; 
+            inpts[ii]=inpt1; 
+            ii++; 
+            move(li,inpt1); 
+             
+            for(var i=0;i<inpts.length;i++){ 
+                inpts[i].onclick=del; 
+            } 
+        } 
+         
+    } 
+   
+    
+</script> 
+</body> 
+</html>
