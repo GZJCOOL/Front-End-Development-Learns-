@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        #box1 {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: fixed;
+
+            left: 0;
+            top: 0;
+        }
+        #box2 {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: fixed;
+            left: 0;
+            top: 200px;
+        }
+        #box3 {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: fixed;
+            left: 0;
+            top: 400px;
+        }
+    </style>
+<body>
+    <div id="box1"></div>
+    <br>
+    <div id="box2"></div>
+    <br>
+    <div id="box3"></div>
+    <br>
+
+    <script>
+        let box1 = document.querySelector("#box1");
+        let box2 = document.querySelector("#box2");
+        let box3 = document.querySelector("#box3");
+
+ 
+        function interval1(target) {
+            let left = box1.offsetLeft;
+            let t = setTimeout(function() {
+                left += 13;
+                box1.style.left = left + 'px';
+                if (left >= target) {
+                    box1.style.left = target + 'px';
+                    return;
+                }
+                interval1(target);
+            }, 1000 / 60)
+        }
+        function interval2(target) {
+            let left = box2.offsetLeft;
+            let t = setTimeout(function() {
+                left += 13;
+                box2.style.left = left + 'px';
+                if (left >= target) {
+                    box2.style.left = target + 'px';
+                    return;
+                }
+                interval2(target);
+            }, 1000 / 60)
+        }
+        function interval3(target) {
+            let left = box3.offsetLeft;
+            let t = setTimeout(function() {
+                left += 13;
+                box3.style.left = left + 'px';
+                if (left >= target) {
+                    box3.style.left = target + 'px';
+                    return;
+                }
+                interval3(target);
+            }, 1000 / 60)
+        }
+        let step=(time)=>{
+            return new Promise((resolve)=>{
+                setTimeout(()=>{
+                    resolve();
+                },time);
+            });
+        };
+        async function gzj(){
+            let word1=await step(1000);
+            interval1(700);
+            let word2=await step(1000);
+            interval2(700);
+            let word3=await step(1000);
+            interval3(700);
+        }
+        gzj().then((res)=>{
+            interval3;
+        });
+        
+    </script>
+    </body>
+
+
+</html>
