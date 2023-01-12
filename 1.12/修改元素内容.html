@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>粉红色的回忆</div>
+    <script>
+        // document.write('Hello World!');
+        // document.write('<h1>你好，世界！</h1>')
+       
+        //1.获取对象
+        let box=document.querySelector('div')
+        //2.修改对象
+        box.innerText='什么狗屁回忆'
+        //innerHtml可以解析标签
+        box.innerHTML='<strong>到底什么狗屁回忆</strong>'
+
+    </script>
+</body>
+</html>
