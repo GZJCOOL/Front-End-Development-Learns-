@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description">
+    <title>网易云音乐</title>
+    <link rel="stylesheet" href="./src/views/find_music/per_recom/per_recom.css">
+    <link rel="stylesheet" href="./src/components/doc/doc.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.27.2/axios.min.js"></script>
+    <script src="./src/views/find_music/per_recom/index.js"></script>
+
+
+</head>
+
+<body>
+
+    <iframe src="./src/components/header/header.html" id="ifm1" scrolling="no" height="70px" width="100%"
+        frameborder="0"></iframe>
+    <div class="clear1"></div>
+    <iframe src="./src/views/find_music/nav/nav.html" id='ifm2' scrolling="no" height="65px" frameborder="0"
+        width="100%"></iframe>
+    <div class="clear2"></div>
+    <iframe src="./src/components/side_nav/side_nav.html" id='ifm3' scrolling="no" height="100%"
+        frameborder="0"></iframe>
+    <div class="clear3"></div>
+
+    <div class="content">
+        <!-- 个性推荐 -->
+        <div class="per_recommend">
+
+            <!-- 轮播图 -->
+            <div class="per_rotation">
+
+                <!-- 大盒子 -->
+                <div class="box">
+                    <!-- 左侧按钮 -->
+                    <a href="javascript:;" class="left">&lt</a>
+                    <!-- 右侧按钮 -->
+                    <a href="javascript:;" class="right">&gt</a>
+                    <!-- 轮播图片 -->
+                    <ul class="imgs">
+                        <li class="one">
+                            <a href="#" alt="">
+                                <img src="http://p1.music.126.net/kyz4C6CQK4FR_34RskyKrA==/109951167721569633.jpg"
+                                    title="m">
+                            </a>
+                            <p style="display: none;">7537275504</p>
+                        </li>
+                        <li class="two">
+                            <a href="#">
+                                <img src="http://p1.music.126.net/WdZ4rSWKw4JIbeaPhD-Wpg==/109951167721246622.jpg"
+                                    alt="">
+                            </a>
+                            <p style="display: none;">7544032547</p>
+
+                        </li>
+                        <li class="three">
+                            <a href="#"><img
+                                    src="http://p1.music.126.net/UlbhTferSw2ECuQLC-HZng==/109951167721494656.jpg"
+                                    alt="">
+                            </a>
+                            <p style="display: none;">1967457117</p>
+
+                        </li>
+                        <li class="four">
+                            <a href="#"><img
+                                    src="http://p1.music.126.net/XIWd01zThe6hu8nFjMGCZQ==/109951167721345988.jpg"
+                                    alt="">
+                            </a>
+                            <p style="display: none;">1963741437</p>
+
+                        </li>
+                        <li class="five">
+                            <a href="#"><img
+                                    src="http://p1.music.126.net/9oTsGmGOkj84A4Ud56BxBQ==/109951167721376526.jpg"
+                                    alt="">
+                            </a>
+                            <p style="display: none;">34964</p>
+
+                        </li>
+                        <li class="six">
+                            <a href="#"><img
+                                    src="http://p1.music.126.net/rHtF_QvynRshKoKhWpwIQw==/109951167721388718.jpg"
+                                    alt="">
+                            </a>
+                            <p style="display: none;">148586148</p>
+
+                        </li>
+                        <li class="six">
+                            <a href="#"><img
+                                    src="http://p1.music.126.net/RmqpnEZWMgd-9Um-BQ2npA==/109951167721395841.jpg"
+                                    alt="">
+                            </a>
+                            <p style="display: none;">148690403</p>
+
+                        </li>
+                        <li class="six">
+                            <a href="#"><img
+                                    src="http://p1.music.126.net/eK5oWMR3aVybOZe8M2SjvA==/109951167721382259.jpg"
+                                    alt="">
+                            </a>
+                            <p style="display: none;">1967119498</p>
+
+                        </li>
+                    </ul>
+                    <ul class="list">
+                    </ul>
+                    <div class="rights"></div>
+                    <div class="lefts"></div>
+                </div>
+            </div>
+
+
+            <!-- 推荐歌单 -->
+
+
+            <div class="song_list">
+                <div class="song_title">
+                    <h2><a href="/songs_list">推荐歌单</a></h2>
+                    <a href="/songs_list" title="m">
+                        <img src="./src/assets/img/tuijian/tui_you.png" alt="">
+                    </a>
+                </div>
+                <div class="song_detail">
+                    <ul>
+                        <!-- <li>
+                            <div class="t_cover">
+                                <a href="#">
+                                    <img src="../../../assets/img/tuijian/meiri.png" alt="">
+                                </a>
+                            </div>
+
+                            <p>
+                                <a href="#">每日歌曲推荐</a>
+                            </p>
+                        </li> -->
+                        <!-- <li>
+                            <div class="t_cover">
+                                <a href="#">
+                                    <img src="https://p2.music.126.net/ReRkyVpcqeKCzxTVUvENAg==/109951162857949886.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                            <p>
+                                <a href="#">「粤语」人世间所有的相遇 都是久别重逢</a>
+                            </p>
+                            <p style="display: none;">596729952</p>
+                        </li>
+                        <li>
+                            <div class="t_cover">
+                                <a href="#">
+                                    <img src="https://p2.music.126.net/4L--5jGuNNCdRxL10n_0-g==/19057835044326350.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                            <p>
+                                <a href="#">华语百首 | 回忆伤人无声，唱不尽世间遗憾</a>
+                            </p>
+                            <p style="display: none;">698720887</p>
+                        </li>
+                        <li>
+                            <div class="t_cover">
+                                <a href="#">
+                                    <img src="https://p2.music.126.net/uFWcdYyjcqvM5JFZ5nsPGw==/1365593453032084.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                            <p>
+                                <a href="#">不让你通宵循环的电音不是好电音</a>
+                            </p>
+                            <p style="display: none;">128871831</p>
+                        </li>
+                        <li>
+                            <div class="t_cover">
+                                <a href="#" >
+                                    <img src="https://p2.music.126.net/cvmt4nmLFJfU35VDkxJl0A==/109951164833038560.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                            <p>
+                                <a href="#">华语集 | 200首歌曲循环了整个青春时代</a>
+                            </p>
+                            <p style="display: none;">4931392807</p>
+                        </li>
+                        <li>
+                            <div class="t_cover">
+                                <a href="#">
+                                    <img src="https://p2.music.126.net/_ybcEpYdUVxuCct1yQwpyg==/109951163093420045.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                            <p>
+                                <a href="#">夜晚催眠粤语男声 唱出谁的孤单心事</a>
+                            </p>
+                            <p style="display: none;">2023551932</p>
+                        </li>
+                        <li>
+                            <div class="t_cover">
+                                <a href="#" >
+                                    <img src="https://p2.music.126.net/q9lmpyYPfPnOiDXrH-dCiA==/109951163612786772.jpg" alt="">
+                                </a>
+                            </div>
+                            <p>
+                                <a href="#">E8r【300首适合带上耳机看书刷题纯音】❤</a>
+                            </p>
+                            <p style="display: none;">623813202</p>
+                        </li>
+                        <li>
+                            <div class="t_cover">
+                                <a href="#">
+                                    <img src="https://p2.music.126.net/RzS3vsptmZTnolOO5EKFlA==/109951166169354821.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                            <p>
+                                <a href="#">放下一个人需要多久？</a>
+                            </p>
+                            <p style="display: none;">43065715</p>
+                        </li>
+                        <li>
+                            <div class="t_cover">
+                                <a href="#">
+                                    <img src="https://p2.music.126.net/PzgUTHoKuWyqjuzDAC6S5w==/109951166299954997.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                            <p>
+                                <a href="#">国语珍藏 | 给你一张过去的CD</a>
+                            </p>
+                            <p style="display: none;">6845897480</p>
+                        </li>
+                        <li>
+                            <div class="t_cover">
+                                <a href="#">
+                                    <img src="https://p2.music.126.net/CY-RRAFYrYQ9yotmK7icKg==/109951164384399731.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                            <p>
+                                <a href="#">压箱私藏 | 那些躲在角落里的小众音乐</a>
+                            </p>
+                            <p style="display: none;">2998483698</p>
+                        </li> -->
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <!-- 热门播客 -->
+
+            <div class="hot_podcast">
+                <div class="hot_title">
+                    <h2><a href="#">热门播客</a></h2>
+                    <a href="#" title="m">
+                        <img src="./src/assets/img/tuijian/tui_you.png" alt="">
+                    </a>
+                </div>
+
+                <div class="hot_detail">
+                    <ul>
+                        <li>
+                            <div class="hot_img">
+
+                                <a href="" title="m">
+                                    <img src="./src/assets/img/tuijian/bk_1.jpg" alt="" class="hot_pic">
+                                </a>
+                                <img src="./src/assets/img/open.png" alt="" class="hot_open">
+
+
+                            </div>
+                            <div class="hot_word">
+                                <p class="word_title">轻松频率:助眠氛围轻音</p>
+                                <span>歌曲翻唱</span>
+                                <div class="bottom">
+                                    <p class="bottom_intro">2022抖音热歌BGM...</p>
+                                    <img src="./src/assets/img/tuijian/bk_b.png" alt="" class="bottom_num">
+                                    <p class="bottom_shuzi">47821</p>
+                                    <img src="./src/assets/img/tuijian/bk_time.png" alt="" class="bottom_time">
+                                    <p class="bottom_min">00:22</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="hot_img">
+                                <a href="" title="m">
+                                    <img src="./src/assets/img/tuijian/bk_1.jpg" alt="">
+                                </a>
+                                <img src="./src/assets/img/open.png" alt="" class="hot_open">
+                            </div>
+                            <div class="hot_word">
+                                <p class="word_title">轻松频率:助眠氛围轻音</p>
+                                <span>歌曲翻唱</span>
+                                <div class="bottom">
+                                    <p class="bottom_intro">2022抖音热歌BGM...</p>
+                                    <img src="./src/assets/img/tuijian/bk_b.png" alt="" class="bottom_num">
+                                    <p class="bottom_shuzi">47821</p>
+                                    <img src="./src/assets/img/tuijian/bk_time.png" alt="" class="bottom_time">
+                                    <p class="bottom_min">00:22</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="hot_img">
+                                <a href="" title="m">
+                                    <img src="./src/assets/img/tuijian/bk_1.jpg" alt="">
+                                </a>
+                                <img src="./src/assets/img/open.png" alt="" class="hot_open">
+                            </div>
+                            <div class="hot_word">
+                                <p class="word_title">轻松频率:助眠氛围轻音</p>
+                                <span>歌曲翻唱</span>
+                                <div class="bottom">
+                                    <p class="bottom_intro">2022抖音热歌BGM...</p>
+                                    <img src="./src/assets/img/tuijian/bk_b.png" alt="" class="bottom_num">
+                                    <p class="bottom_shuzi">47821</p>
+                                    <img src="./src/assets/img/tuijian/bk_time.png" alt="" class="bottom_time">
+                                    <p class="bottom_min">00:22</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="hot_img">
+                                <a href="" title="m">
+                                    <img src="./src/assets/img/tuijian/bk_1.jpg" alt="">
+                                </a>
+                                <img src="./src/assets/img/open.png" alt="" class="hot_open">
+                            </div>
+                            <div class="hot_word">
+                                <p class="word_title">轻松频率:助眠氛围轻音</p>
+                                <span>歌曲翻唱</span>
+                                <div class="bottom">
+                                    <p class="bottom_intro">2022抖音热歌BGM...</p>
+                                    <img src="./src/assets/img/tuijian/bk_b.png" alt="" class="bottom_num">
+                                    <p class="bottom_shuzi">47821</p>
+                                    <img src="./src/assets/img/tuijian/bk_time.png" alt="" class="bottom_time">
+                                    <p class="bottom_min">00:22</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="hot_img">
+                                <a href="" title="m">
+                                    <img src="./src/assets/img/tuijian/bk_1.jpg" alt="">
+                                </a>
+                                <img src="./src/assets/img/open.png" alt="" class="hot_open">
+                            </div>
+                            <div class="hot_word">
+                                <p class="word_title">轻松频率:助眠氛围轻音</p>
+                                <span>歌曲翻唱</span>
+                                <div class="bottom">
+                                    <p class="bottom_intro">2022抖音热歌BGM...</p>
+                                    <img src="./src/assets/img/tuijian/bk_b.png" alt="" class="bottom_num">
+                                    <p class="bottom_shuzi">47821</p>
+                                    <img src="./src/assets/img/tuijian/bk_time.png" alt="" class="bottom_time">
+                                    <p class="bottom_min">00:22</p>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="hot_img">
+                                <a href="" title="m">
+                                    <img src="./src/assets/img/tuijian/bk_1.jpg" alt="">
+                                </a>
+                                <img src="./src/assets/img/open.png" alt="" class="hot_open">
+                            </div>
+                            <div class="hot_word">
+                                <p class="word_title">轻松频率:助眠氛围轻音</p>
+                                <span>歌曲翻唱</span>
+                                <div class="bottom">
+                                    <p class="bottom_intro">2022抖音热歌BGM...</p>
+                                    <img src="./src/assets/img/tuijian/bk_b.png" alt="" class="bottom_num">
+                                    <p class="bottom_shuzi">47821</p>
+                                    <img src="./src/assets/img/tuijian/bk_time.png" alt="" class="bottom_time">
+                                    <p class="bottom_min">00:22</p>
+                                </div>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--独家放送  -->
+
+            <div class="ex_broadcast">
+
+                <div class="ex_title">
+                    <h2><a href="#">独家放送</a></h2>
+                    <a href="" title="m">
+                        <img src="./src/assets/img/tuijian/tui_you.png" alt="">
+                    </a>
+                </div>
+                <div class="ex_detail">
+                    <ul>
+                        <!-- <li>
+                            <a href="" title="m">
+                                <img src="../../../assets/img/tuijian/d1.png" alt="" class="ex_img">
+                            </a>
+                            <a href="" class="ex_intro">《超级面对面》第254期keshi：我的音乐永远新鲜</a>
+                            <p style="display: none;"></p>
+                        </li>
+                        <li>
+                            <a href="" title="m">
+                                <img src="../../../assets/img/tuijian/d1.png" alt="" class="ex_img">
+                            </a>
+                            <a href="" class="ex_intro">《超级面对面》第253期Charlie Puth：灵感就在开关之间</a>
+
+                        </li>
+                        <li>
+                            <a href="" title="m">
+                                <img src="../../../assets/img/tuijian/d3.png" alt="" class="ex_img">
+
+                            </a>
+                            <a href="" class="ex_intro">惊喜呈现|姜贞羽：热爱舞台上的每一个瞬间</a>
+
+
+                        </li> -->
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- 最新音乐 -->
+
+            <div class="new_music">
+                <div class="new_title">
+                    <h2><a href="#">最新音乐</a></h2>
+                    <a href="#" title="m">
+                        <img src="./src/assets/img/tuijian/tui_you.png" alt="">
+                    </a>
+                </div>
+
+                <div class="new_detail">
+                    <ul>
+                        <!-- <li>
+                            <div class="new_img">
+
+                                <a href="#" title="m">
+                                    <img src="http://p1.music.126.net/NQuJoSEQ3gyaDILiW5Y4vA==/109951167666338774.jpg" alt="" class="new_pic">
+                                    <img src="../../../assets/img/open.png" alt="" class="new_open">
+                                </a>
+                            </div>
+                            <div class="new_word">
+                                <p class="word_title">量贩人生路</p>
+                                <div class="bottom">
+                                    <img src="../../../assets/img/tuijian/sq.png" alt="" class="bottom_sq">
+                                    <p class="bottom_name">旅行团乐队</p>
+                                    <p style="display: none;">12111</p>
+
+                                </div>
+                            </div>
+                            <p style="display: none;">1963741437</p>
+                        </li>
+                        <li>
+                            <div class="new_img">
+
+                                <a href="#" title="m">
+                                    <img src="http://p1.music.126.net/5ag0jUEticKf8UdnsVZShw==/109951167717399606.jpg" alt="" class="new_pic">
+                                    <img src="../../../assets/img/open.png" alt="" class="new_open">
+
+                                </a>
+
+
+                            </div>
+                            <div class="new_word">
+                                <p class="word_title">电子荒野</p>
+                                <div class="bottom">
+                                    <img src="../../../assets/img/tuijian/sq.png" alt="" class="bottom_sq">
+
+                                    <p class="bottom_name">声音碎片乐队</p>
+                                    <p style="display: none;">12710</p>
+                                </div>
+                            </div>
+                            <p style="display: none;">1967164422</p>
+                        </li>
+                        <li>
+                            <div class="new_img">
+
+                                <a href="#" title="m">
+                                    <img src="http://p1.music.126.net/CfeHBRaFs7BkrCOcDmqpgQ==/109951167719674483.jpg" alt="" class="new_pic"> <img
+                                        src="../../../assets/img/open.png" alt="" class="new_open">
+
+                                </a>
+
+
+                            </div>
+                            <div class="new_word">
+                                <p class="word_title">小狗</p>
+                                <div class="bottom">
+                                    <img src="../../../assets/img/tuijian/sq.png" alt="" class="bottom_sq">
+                                    <p class="bottom_name">廖俊涛</p>
+                                    <p style="display: none;">13022016</p>
+                                </div>
+                            </div>
+                            <p style="display: none;">1967119466</p>
+                        </li>
+                        <li>
+                            <div class="new_img">
+
+                                <a href="#" title="m">
+                                    <img src="http://p1.music.126.net/cXp32xno3m79hKwosh9xXA==/109951167721219883.jpg" alt="" class="new_pic">
+                                    <img src="../../../assets/img/open.png" alt="" class="new_open">
+                                </a>
+                            </div>
+                            <div class="new_word">
+                                <p class="word_title">飞</p>
+                                <div class="bottom">
+                                    <img src="../../../assets/img/tuijian/sq.png" alt="" class="bottom_sq">
+
+                                    <p class="bottom_name">与非门乐队</p>
+                                    <p style="display: none;"> 13419</p>
+                                </div>
+                            </div>
+                            <p style="display: none;">1967456781</p>
+                        </li>
+                        <li>
+                            <div class="new_img">
+
+                                <a href="#">
+                                    <img src="http://p1.music.126.net/_-kFkY-AqR6SK5wEqGmT7w==/109951167716126287.jpg" alt="" class="new_pic">
+                                    <img src="../../../assets/img/open.png" alt="" class="new_open">
+                                </a>
+                            </div>
+                            <div class="new_word">
+                                <p class="word_title">我们</p>
+                                <div class="bottom">
+                                    <img src="../../../assets/img/tuijian/sq.png" alt="" class="bottom_sq">
+                                    <p class="bottom_name">袁娅维TIA RAY</p>
+                                    <p style="display: none;">10473</p>
+                                </div>
+                            </div>
+                            <p style="display: none;">1967087138</p>
+                        </li>
+                        <li>
+                            <div class="new_img">
+                                <a href="#" >
+                                    <img src="http://p1.music.126.net/Ntvq6hAvxbHpLuln3B_JvA==/109951167716957314.jpg" alt="" class="new_pic">
+                                    <img src="../../../assets/img/open.png" alt="" class="new_open">
+                                </a>
+                            </div>
+                            <div class="new_word">
+                                <p class="word_title">眷慕似海 应许此生</p>
+                                <div class="bottom">
+                                    <img src="../../../assets/img/tuijian/sq.png" alt="" class="bottom_sq">
+                                    <p class="bottom_name">HOYO-MiX</p>
+                                    <p style="display: none;">12487174</p>
+                                </div>
+                            </div>
+                            <p style="display: none;">1967134190</p>
+                        </li>
+                        <li>
+                            <div class="new_img">
+
+                                <a href="#" title="m">
+                                    <img src="http://p1.music.126.net/wEE8wMaDI9l-bj3lE9LEYg==/109951167690580817.jpg" alt="" class="new_pic">
+                                    <img src="../../../assets/img/open.png" alt="" class="new_open">
+                                </a>
+                            </div>
+                            <div class="new_word">
+                                <p class="word_title">只用一次</p>
+                                <div class="bottom">
+                                    <img src="../../../assets/img/tuijian/sq.png" alt="" class="bottom_sq">
+                                    <p class="bottom_name">韦礼安</p>
+                                    <p style="display: none;">5379</p>
+
+                                </div>
+                            </div>
+                            <p style="display: none;">1965122075</p>
+                        </li>
+                        <li>
+                            <div class="new_img">
+
+                                <a href="#" title="m">
+                                    <img src="http://p1.music.126.net/UzlJ2JjjFZnpAivFjpvMVw==/109951167703958112.jpg" alt="" class="new_pic">
+                                    <img src="../../../assets/img/open.png" alt="" class="new_open">
+                                </a>
+
+
+                            </div>
+                            <div class="new_word">
+                                <p class="word_title">Outer Ego (Sunset Rollercoaster Remix)</p>
+                                <div class="bottom">
+                                    <img src="../../../assets/img/tuijian/sq.png" alt="" class="bottom_sq">
+                                    <p class="bottom_name">The fin.</p>
+                                    <p style="display: none;">942028</p>
+
+                                </div>
+                            </div>
+                            <p style="display: none;">1966147838</p>
+
+                        </li>
+                        <li>
+                            <div class="new_img">
+
+                                <a href="#" title="m">
+                                    <img src="http://p1.music.126.net/GDPNYLsCZtGzGZ5Riln8Bg==/109951167661496088.jpg" alt="" class="new_pic">
+                                    <img src="../../../assets/img/open.png" alt="" class="new_open">
+                                </a>
+                            </div>
+                            <div class="new_word">
+                                <p class="word_title">煽げや尊し</p>
+                                <div class="bottom">
+                                    <img src="../../../assets/img/tuijian/sq.png" alt="" class="bottom_sq">
+                                    <p class="bottom_name">Reol</p>
+                                    <p style="display: none;">13059968</p>
+                                </div>
+                            </div>
+                            <p style="display: none;">1963400247</p>
+                        </li>
+                        <li>
+                            <div class="new_img">
+
+                                <a href="#" >
+                                    <img src="http://p1.music.126.net/2zPVcwqXizlU2X4f1YDxjw==/109951167721279931.jpg" alt="" class="new_pic">
+                                    <img src="../../../assets/img/open.png" alt="" class="new_open">
+                                </a>
+                            </div>
+                            <div class="new_word">
+                                <p class="word_title">不得不撒</p>
+                                <div class="bottom">
+                                    <img src="../../../assets/img/tuijian/sq.png" alt="" class="bottom_sq">
+                                    <p class="bottom_name">KEY.L刘聪</p>
+                                    <p style="display: none;">12788674</p>
+                                </div>
+                            </div>
+                            <p style="display: none;">1967457117</p>
+                        </li>
+                        <li>
+                            <div class="new_img">
+
+                                <a href="#" >
+                                    <img src="http://p1.music.126.net/xx0IesJ90lCktDZy_AlLqA==/109951167708703253.jpg" alt="" class="new_pic">
+                                    <img src="../../../assets/img/open.png" alt="" class="new_open">
+                                </a>
+                            </div>
+                            <div class="new_word">
+                                <p class="word_title">Celebrate</p>
+                                <div class="bottom">
+                                    <img src="../../../assets/img/tuijian/sq.png" alt="" class="bottom_sq">
+                                    <p class="bottom_name">TWICE</p>
+                                    <p style="display: none;">1161043</p>
+
+                                </div>
+                            </div>
+                            <p style="display: none;">1966531030</p>
+
+                        </li>
+                        <li>
+                            <div class="new_img">
+
+                                <a href="" title="m">
+                                    <img src="http://p1.music.126.net/1-wvywCshZaXOk5DATQnhw==/109951167713124357.jpg" alt="" class="new_pic">
+                                    <img src="../../../assets/img/open.png" alt="" class="new_open">
+
+                                </a>
+
+                            </div>
+                            <div class="new_word">
+                                <p class="word_title">和平鸽</p>
+                                <div class="bottom">
+                                    <img src="../../../assets/img/tuijian/sq.png" alt="" class="bottom_sq">
+                                    <p class="bottom_name">陈粒</p>
+                                    <p style="display: none;">1007170</p>
+
+                                </div>
+                            </div>
+                            <p style="display: none;">1966823775</p>
+
+                        </li> -->
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- 主题播客 -->
+
+            <div class="topic_podcast">
+                <div class="topic_title">
+                    <h2><a href="#">主题播客</a></h2>
+                    <a href="#" title="m">
+                        <img src="./src/assets/img/tuijian/tui_you.png" alt="">
+                    </a>
+                </div>
+
+                <div class="topic_detail">
+                    <ul>
+                        <li>
+                            <div class="topic_img">
+                                <a href="#" title="m">
+                                    <img src="./src/assets/img/tuijian/n2.jpg" alt="">
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="topic_img">
+                                <a href="#" title="m">
+                                    <img src="./src/assets/img/tuijian/n2.jpg" alt="">
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="topic_img">
+                                <a href="#" title="m">
+                                    <img src="./src/assets/img/tuijian/n2.jpg" alt="">
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="topic_img">
+                                <a href="#" title="m">
+                                    <img src="./src/assets/img/tuijian/n2.jpg" alt="">
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="topic_img">
+                                <a href="#" title="m">
+                                    <img src="./src/assets/img/tuijian/n2.jpg" alt="">
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="topic_img">
+                                <a href="#" title="m">
+                                    <img src="./src/assets/img/tuijian/n2.jpg" alt="">
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+
+            <!-- 推荐MV -->
+            <div class="recommend_mv">
+                <div class="recommend_title">
+                    <h2><a href="#">推荐MV</a></h2>
+                    <a href="#">
+                        <img src="../../../assets/img/tuijian/tui_you.png" alt="">
+                    </a>
+                </div>
+
+                <div class="recommend_detail">
+                    <ul>
+                        <!-- <li>
+                            <a href="#" class="recommend_link">
+                                <img src="https://p1.music.126.net/uigDDMmrc9JXeB8wFVbvZA==/109951167720493853.jpg" alt="" class="recom_img">
+                            </a>
+                            <p style="display: none;"class="recom_mid">14547665</p>
+                            <a href="#" class="recommend_intro">迷途未返</a>
+                            <a href="#" class="recommend_name">葡萄不愤怒</a>
+                            <p style="display: none;" class="recom_uid">1012004</p>
+                        </li>
+                        <li>
+                            <a href="#" class="recommend_link" >
+                                <img src="https://p1.music.126.net/r6V_TnoNARRxf4DfS6B-Mg==/109951167720879143.jpg" alt="" class="recom_img">
+                            </a>
+                            <p style="display: none;"class="recom_mid">14547811</p>
+
+                            <a href="#" class="recommend_intro">追光的我们 MV</a>
+                            <a href="#" class="recommend_name">王梓馨/赵芸笛/赵妍希/刘子月</a>
+                            <p style="display: none;" class="recom_uid">51302422</p>
+
+                        </li>
+                        <li>
+                            <a href="#" class="recommend_link">
+                                <img src="https://p1.music.126.net/sGFLe-NXzViHwqJ95KT7kg==/109951167660477082.jpg" alt="" class="recom_img">
+                            </a>
+                            <p style="display: none;"class="recom_mid">14544521</p>
+
+                            <a href="#" class="recommend_intro">Querida Tristeza (Official Audio)</a>
+                            <a href="#" class="recommend_name">Aldo Monges</a>
+                            <p style="display: none;" class="recom_uid">47785</p>
+
+                        </li>
+                        <li>
+                            <a href="#" class="recommend_link">
+                                <img src="https://p1.music.126.net/hvi1OVoXQIbdL8XxvQGI4Q==/109951167660447758.jpg" alt="" class="recom_img">
+                            </a>
+                            <p style="display: none;"class="recom_mid">14544501</p>
+
+                            <a href="#" class="recommend_intro">Vuelvo a Vivir, Vuelvo a Cantar (Official Audio)</a>
+                            <a href="#" class="recommend_name">Los Iracundos</a>
+                            <p style="display: none;" class="recom_uid">65860</p>
+
+                        </li> -->
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- 听听 直播-->
+            <div class="hear_live">
+                <div class="hear_title">
+                    <h2><a href="#">听听</a></h2>
+                    <a href="#" title="m">
+                        <img src="./src/assets/img/tuijian/tui_you.png" alt="">
+                    </a>
+                </div>
+                <div class="hear_detail">
+                    <ul>
+                        <!-- <li>
+                            <a href="" class="hear_link" title="m">
+                                <img src="./src/assets/img/tuijian/hear1.png" alt="" class="hear_img">
+                            </a>
+                            <a href="" class="hear_intro">温柔治愈翻唱</a>
+                            <div class="hear_pername">
+                                <a href="" title="m">
+                                    <img src="./src/assets/img/tuijian/hear_tou.png" alt="" class="hear_tou">
+                                    <p class="hear_name">秋湫-辞辞冠名</p>
+                                    <img src="./src/assets/img/tuijian/hear_yinyue.png" alt="" class="hear_music">
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" class="hear_link" title="m">
+                                <img src="./src/assets/img/tuijian/hear1.png" alt="" class="hear_img">
+                            </a>
+                            <a href="" class="hear_intro">温柔治愈翻唱</a>
+                            <div class="hear_pername">
+                                <a href="" title="m">
+                                    <img src="./src/assets/img/tuijian/hear_tou.png" alt="" class="hear_tou">
+                                    <p class="hear_name">秋湫-辞辞冠名</p>
+                                    <img src="./src/assets/img/tuijian/hear_yinyue.png" alt="" class="hear_music">
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" class="hear_link" title="m">
+                                <img src="./src/assets/img/tuijian/hear1.png" alt="" class="hear_img">
+                            </a>
+                            <a href="" class="hear_intro">温柔治愈翻唱</a>
+                            <div class="hear_pername">
+                                <a href="" title="m">
+                                    <img src="./src/assets/img/tuijian/hear_tou.png" alt="" class="hear_tou">
+                                    <p class="hear_name">秋湫-辞辞冠名</p>
+                                    <img src="./src/assets/img/tuijian/hear_yinyue.png" alt="" class="hear_music">
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" class="hear_link" title="m">
+                                <img src="./src/assets/img/tuijian/hear1.png" alt="" class="hear_img">
+                            </a>
+                            <a href="" class="hear_intro">温柔治愈翻唱</a>
+                            <div class="hear_pername">
+                                <a href="" title="m">
+                                    <img src="./src/assets/img/tuijian/hear_tou.png" alt="" class="hear_tou">
+                                    <p class="hear_name">秋湫-辞辞冠名</p>
+                                    <img src="./src/assets/img/tuijian/hear_yinyue.png" alt="" class="hear_music">
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" class="hear_link" title="m">
+                                <img src="./src/assets/img/tuijian/hear1.png" alt="" class="hear_img">
+                            </a>
+                            <a href="" class="hear_intro">温柔治愈翻唱</a>
+                            <div class="hear_pername">
+                                <a href="" title="m">
+                                    <img src="./src/assets/img/tuijian/hear_tou.png" alt="" class="hear_tou">
+                                    <p class="hear_name">秋湫-辞辞冠名</p>
+                                    <img src="./src/assets/img/tuijian/hear_yinyue.png" alt="" class="hear_music">
+                                </a>
+                            </div>
+                        </li> -->
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- 看看 -->
+            <div class="look_live">
+                <div class="look_title">
+                    <h2><a href="#">看看</a></h2>
+                    <a href="#" title="m">
+                        <img src="./src/assets/img/tuijian/tui_you.png" alt="">
+                    </a>
+                </div>
+                <div class="look_detail">
+                    <ul>
+                        <li>
+                            <div class="look_pic">
+                                <a href="" class="look_link" title="m">
+                                    <img src="./src/assets/img/tuijian/look1.png" alt="" class="look_img">
+                                    <img src="./src/assets/img/open.png" alt="" class="look_open">
+
+                                </a>
+                            </div>
+
+                            <a href="" class="look_intro">温柔治愈翻唱</a>
+
+                        </li>
+                        <li>
+                            <div class="look_pic">
+                                <a href="" class="look_link" title="m">
+                                    <img src="./src/assets/img/tuijian/look1.png" alt="" class="look_img">
+                                    <img src="./src/assets/img/open.png" alt="" class="look_open">
+
+                                </a>
+                            </div>
+
+                            <a href="" class="look_intro">温柔治愈翻唱</a>
+                        </li>
+                        <li>
+                            <div class="look_pic">
+                                <a href="" class="look_link" title="m">
+                                    <img src="./src/assets/img/tuijian/look1.png" alt="" class="look_img">
+                                    <img src="./src/assets/img/open.png" alt="" class="look_open">
+
+                                </a>
+                            </div>
+
+                            <a href="" class="look_intro">温柔治愈翻唱</a>
+                        </li>
+                        <li>
+                            <div class="look_pic">
+                                <a href="" class="look_link" title="m">
+                                    <img src="./src/assets/img/tuijian/look1.png" alt="" class="look_img">
+                                    <img src="./src/assets/img/open.png" alt="" class="look_open">
+
+                                </a>
+                            </div>
+
+                            <a href="" class="look_intro">温柔治愈翻唱</a>
+                        </li>
+                        <li>
+                            <div class="look_pic">
+                                <a href="" class="look_link" title="m">
+                                    <img src="./src/assets/img/tuijian/look1.png" alt="" class="look_img">
+                                    <img src="./src/assets/img/open.png" alt="" class="look_open">
+
+                                </a>
+                            </div>
+
+                            <a href="" class="look_intro">温柔治愈翻唱</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- 更换顺序 -->
+            <div class="change_order">
+                <div class="change_enter">
+                    <p>现在可以根据个人喜好，自由调整首页栏目顺序啦~</p>
+                    <span>调整栏目顺序</span>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="./src/views/find_music/per_recom/lunbo.js"></script>
+
+
+    </div>
+
+    <!-- -------------------------------- -->
+
+    <script src="./app.js"></script>
+
+
+    <iframe src="src/components/footer/footer.html" id="ifm4" scrolling="no" height="70px" width="100%"
+        frameborder="0"></iframe>
+</body>
+
+</html>
