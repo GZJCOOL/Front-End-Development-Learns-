@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 防抖 -->
+    请输入用户名：<input type="text" id="username">
+    请输入密码：<input type="text" id="password">
+    
+    <script>
+        let timer1
+        let count1 =0
+        let password=document.getElementById('password')
+        password.addEventListener('input',debounce,false)
+        let debounce=function(){
+            
+            console.log(++count1);
+            clearTimeout(timer1)
+            timer=setTimeout(function(){
+                console.log('密码已输入完毕')
+            },2500)
+        }
+    </script>
+    <!-- 节流 -->
+    <script>
+        let timer2
+        let count2=0
+        let username=document.getElementById('username')
+        username.addEventListener('input',throttle(function(){
+            console.log(++count2)
+        }),false)
+        function throttle(callback){
+            let pretime=Date.now()
+            return function(){
+                let args=arguments
+                let now=Date.now()
+                if(now-pretime>=1000){
+                    callback(args)
+                    pretime=now
+                }
+            }
+        }
+        
+    </script>
+
+</body>
+</html>
