@@ -1,0 +1,11 @@
+{
+  "name": "cqupt-gzjfanfanfan",
+  "version": "1.0.1",
+  "description": "一个简单的用于实现Ajax请求的JavaScript库,支持Promise调用",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chunrye<1960954964@qq.com>",
+  "license": "ISC"
+}
