@@ -1,0 +1,1 @@
+(()=>{new Swiper(".mySwiper",{pagination:{el:".swiper-pagination",dynamicBullets:!0}});var e=document.getElementById("bgm"),a=document.getElementById("music-btn");a.addEventListener("click",(function(){e.paused?(e.play(),a.classList.add("play")):(e.pause(),a.classList.remove("play"))}))})();
